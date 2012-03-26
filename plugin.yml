@@ -1,0 +1,26 @@
+name: MyHelpPages
+author: Mtihc
+description: Show your own text at /help or /help [page]
+main: com.mtihc.minecraft.myhelppages.MyHelpPages
+depend: []
+softdepend: []
+version: 1.3
+commands:
+    help:
+        description: Shows a help page. The page can be a name or number.
+        usage: /help [page]  
+               /help -reload  
+               /help -list [list page]
+permissions:
+    myhelppages.reload:
+        description: Allows you to reload the configuration
+        default: op
+    myhelppages.list:
+        description: Allows you to list all help pages
+        default: op
+    myhelppages.allpages:
+        description: Allows you to see all help pages
+        default: op
+    myhelppages.help:
+        description: Allows you to see the help page called help
+        default: true
