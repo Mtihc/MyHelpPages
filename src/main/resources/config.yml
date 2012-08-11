@@ -1,0 +1,39 @@
+# ------------------------------------------------------------
+# Define help pages in this file.
+# ------------------------------------------------------------
+# For example, 
+# If you configure a help page like this:
+# 
+#  help-getting-started:
+#    - Find some trees
+#    - and gather wood
+# 
+# You can view that page using the following command:
+# /help getting started
+# 
+# ------------------------------------------------------------
+# 
+# You can also use colors. For example, 
+# %red% means the following text will be red.
+# 
+#  help-ranks:
+#    - %green%Players %white%are normal players
+#    - %blue%Moderators %white%can help you
+#    - %red%Admins %white%are not to be bothered
+# 
+# Here's a list of available colors: 
+# aqua, black, blue, darkaqua, darkblue, darkgray, darkgreen, darkpurple,
+# darkred, gold, gray, green, lightpurple, red, white, yellow and magic
+# 
+# ------------------------------------------------------------
+# After you have made changes to this file, execute 
+# /help -reload
+# ------------------------------------------------------------
+# To see a list of help pages in game, execute 
+# /help -list
+# ------------------------------------------------------------
+# 
+messages:
+  noPagePermission: '%red%You don''t have permission for page %yellow%%page%'
+  pageNotFound: '%red%Page %yellow%%page% %red%does not exist'
+  pageTitle: '%aqua%Help page %white%%page%%aqua%:'
