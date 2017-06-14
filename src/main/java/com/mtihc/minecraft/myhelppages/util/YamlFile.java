@@ -78,10 +78,10 @@ public class YamlFile {
 	 */
 	public void setDefaults(String fileName) {
 		
-		InputStream defConfigStream = plugin.getResource(fileName + ".yml");
-		if (defConfigStream != null) {
+		Reader reader = new InputStreamReader(plugin.getResource(fileName + ".yml"));
+		if (reader != null) {
 			YamlConfiguration defConfig = YamlConfiguration
-				.loadConfiguration(defConfigStream);
+				.loadConfiguration(reader);
 			config.options().copyDefaults(true);
 			config.setDefaults(defConfig);
 			save();
@@ -96,10 +96,10 @@ public class YamlFile {
 	 */
 	public void addDefaults(String fileName) {
 		
-		InputStream defConfigStream = plugin.getResource(fileName + ".yml");
-		if (defConfigStream != null) {
+		Reader reader = new InputStreamReader(plugin.getResource(fileName + ".yml"));
+		if (reader != null) {
 			YamlConfiguration defConfig = YamlConfiguration
-				.loadConfiguration(defConfigStream);
+				.loadConfiguration(reader);
 			config.options().copyDefaults(true);
 			config.addDefaults(defConfig);
 			save();
