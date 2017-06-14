@@ -4,6 +4,8 @@ package com.mtihc.minecraft.myhelppages.util;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.logging.Level;
 
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -78,10 +80,10 @@ public class YamlFile {
 	 */
 	public void setDefaults(String fileName) {
 		
-		InputStream defConfigStream = plugin.getResource(fileName + ".yml");
-		if (defConfigStream != null) {
+		Reader reader = new InputStreamReader(plugin.getResource(fileName + ".yml"));
+		if (reader != null) {
 			YamlConfiguration defConfig = YamlConfiguration
-				.loadConfiguration(defConfigStream);
+				.loadConfiguration(reader);
 			config.options().copyDefaults(true);
 			config.setDefaults(defConfig);
 			save();
@@ -96,10 +98,10 @@ public class YamlFile {
 	 */
 	public void addDefaults(String fileName) {
 		
-		InputStream defConfigStream = plugin.getResource(fileName + ".yml");
-		if (defConfigStream != null) {
+		Reader reader = new InputStreamReader(plugin.getResource(fileName + ".yml"));
+		if (reader != null) {
 			YamlConfiguration defConfig = YamlConfiguration
-				.loadConfiguration(defConfigStream);
+				.loadConfiguration(reader);
 			config.options().copyDefaults(true);
 			config.addDefaults(defConfig);
 			save();
