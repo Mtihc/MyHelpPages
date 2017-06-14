@@ -1,5 +1,3 @@
-Description
-
 Define your own custom /help pages using this plugin.
 
 Configure help pages in the pages file.
